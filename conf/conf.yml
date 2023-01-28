@@ -17,6 +17,6 @@ database:
      port: 6379
      db: 0
 
-admin: lgh981203
-password: lgh6568981203
-token: e766794b3bfffeca9aea330e99e75775
+admin: xxxx
+password: xxxx
+token: xxxx
