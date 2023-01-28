@@ -12,7 +12,6 @@ import sys
 from app import *
 from uvicorn import run
 
-
 def main():
     if pro_conf.isdebug:
         run("app.app:app", host=pro_conf.host, port=pro_conf.port, reload=True)
