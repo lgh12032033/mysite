@@ -17,12 +17,12 @@ class BaseConfig:
     Version = "test.v1"
     isdebug = False
 
-
 class DebuggerConfig(BaseConfig):
     isdebug = True
 
 
 class ProductionConfig(DebuggerConfig):
+    # host = "0.0.0.0"
     isdebug = False
     workers = multiprocessing.cpu_count() * 2 + 1  # 并行工作进程数 核心数*2+1个
     threads = 2  # 指定每个工作者的线程数

@@ -8,7 +8,6 @@
 # 启动文件
 import os
 import sys
-
 from app import *
 from uvicorn import run
 

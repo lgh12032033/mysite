@@ -12,7 +12,7 @@ daemon = True
 bind = f'{pro_conf.host}:{pro_conf.port}'
 # 设置进程文件目录
 pidfile = '/var/run/gunicorn.pid'
-chdir = '/opt/web/fastapi'  # 工作目录
+chdir = '/root/web'  # 工作目录
 # 工作模式
 worker_class = 'uvicorn.workers.UvicornWorker'
 # 并行工作进程数 核心数*2+1个
