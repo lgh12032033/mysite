@@ -4,6 +4,7 @@
 # @Time      :2023/1/30 11:14
 # @Author    :liuguanghong
 import logging
+import time
 
 from .get_db import get_sql_session
 from datetime import date
@@ -28,3 +29,16 @@ def visit_total_log():
     ret.totady_visit += 1
     ret.total_visit += 1
     session.commit()
+
+def login_log(ip):
+    session = get_sql_session()
+    try:
+        alt = ALT()
+        alt.login_ip = ip
+        alt.login_time = datetime.fromtimestamp(time.time())
+        session.add(alt)
+        session.commit()
+    except Exception as e:
+        logging.error(e)
+        session.rollback()
+

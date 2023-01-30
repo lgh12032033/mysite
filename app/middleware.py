@@ -9,10 +9,10 @@ import time
 token = "xxxx"
 # 中间件
 from app import app
-from fastapi import  Request, Response
+from fastapi import Request, Response
 from .models.std import Visiter
 from datetime import datetime
-from .db import sql_crud,redis_crud
+from .db import sql_crud, redis_crud
 
 
 @app.middleware("http")
@@ -39,4 +39,13 @@ async def doorman(request: Request, call_next) -> Response:
     if not redis_crud.query_ip(v.visit_ip):
         sql_crud.visit_total_log()
         redis_crud.visiter(v.visit_ip)
+    return response
+
+
+@app.middleware("http")
+async def login_log(request: Request, call_next) -> Response:
+    response = await call_next(request)
+    if "/login" in request.url.path and response.status_code == 200:
+        print("ojbk")
+        sql_crud.login_log(request.client.host)
     return response

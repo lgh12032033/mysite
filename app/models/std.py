@@ -16,3 +16,18 @@ class Visiter(BaseModel):
     visit_route: str
     visit_method: str
     visit_code: int
+
+
+class Link(BaseModel):
+    title: str
+    link: str
+
+
+class Info(BaseModel):
+    host: str
+    info: str
+    email: str
+    friends: list[Link]
+    bookmarks: list[Link]
+    others: list[Link]
+    pays: list[Link]

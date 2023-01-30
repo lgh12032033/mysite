@@ -6,10 +6,19 @@
 
 from app import app
 import json
+from app.models.std import *
+from fastapi import Response
 
 r = "/fds/"
 
-@app.get(f"{r}addTest")
-def addTest():
-    return "ok"
 
+@app.post(f"{r}update_info")
+def update_info(info: Info):
+    with open("app/static/site_info.json", "w", encoding="utf8") as f:
+        json.dump(info.dict(), f)
+    return {"mesg": "ok", "code": 200}
+
+
+@app.get(f"/login")
+def login():
+    return "ok"
