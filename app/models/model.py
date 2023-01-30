@@ -37,6 +37,7 @@ class ALT(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     login_time = Column(DateTime)
     login_ip = Column(String(30))
+    code = Column(Integer)
 
 
 class BaseContent:

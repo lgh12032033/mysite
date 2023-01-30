@@ -31,3 +31,7 @@ class Info(BaseModel):
     bookmarks: list[Link]
     others: list[Link]
     pays: list[Link]
+
+class LoginItem(BaseModel):
+    username:str
+    password:str

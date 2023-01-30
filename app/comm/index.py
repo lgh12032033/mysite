@@ -6,7 +6,7 @@
 
 from app import app
 import json
-
+from app.db import sql_crud
 
 #
 # @app.get("/")
@@ -16,7 +16,13 @@ import json
 
 @app.get("/info")
 def info():
-    with open("app/static/site_info.json", "r",encoding="utf8") as f:
+    with open("app/static/site_info.json", "r", encoding="utf8") as f:
         dic = json.load(f)
     return dic
 
+
+@app.get("/flags/{flag_id}")
+def flags(flag_id: str):
+    ids = flag_id.split("_")
+    flags_list = sql_crud.get_flags(ids)
+    return flags_list

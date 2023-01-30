@@ -17,6 +17,6 @@ database:
      port: 6379
      db: 0
 
-admin: xxxx
-password: xxxx
+admin: 7795
+password: 6666
 token: xxxx

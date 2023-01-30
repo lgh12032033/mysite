@@ -25,3 +25,4 @@ def visiter(ip):
 def query_ip(ip):
     redis = get_redis_session()
     return redis.get(ip)
+
