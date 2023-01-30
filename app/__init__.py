@@ -7,4 +7,7 @@
 
 from .app import *
 from .comm import *
+from .fds import *
+from .bes import *
+from .middleware import *
 from .setting import pro_conf

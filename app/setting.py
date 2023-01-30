@@ -31,5 +31,5 @@ class ProductionConfig(DebuggerConfig):
 
 
 # 在此处切换配置
-# pro_conf = DebuggerConfig
-pro_conf = ProductionConfig
+pro_conf = DebuggerConfig
+# pro_conf = ProductionConfig

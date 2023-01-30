@@ -1,28 +1,32 @@
 {
-  "host": "",
-  "info": "",
+  "host": "liugh.cn",
+  "info": "我的个人站建立于2023年",
   "friends": [
     {
-      "title": "",
-      "link": ""
+      "title": "虚假的友链",
+      "link": "https://cuiqingcai.com/"
     }
   ],
   "bookmarks": [
     {
-      "title": "",
-      "link": ""
+      "title": "绘图工具web",
+      "link": "https://app.diagrams.net/?src=about"
     }
   ],
   "others": [
     {
-      "title": "",
-      "link": ""
+      "title": "csdn",
+      "link": "https://blog.csdn.net/weixin_44064134?spm=1000.2115.3001.5343"
     }
   ],
   "pays": [
     {
-      "title": "",
-      "link": ""
+      "title": "wx-pay",
+      "link": "/wx_pay.png"
+    },
+    {
+      "title": "ali-pay",
+      "link": "/ali_pay.png"
     }
   ]
 }

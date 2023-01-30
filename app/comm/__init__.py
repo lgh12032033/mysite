@@ -6,4 +6,4 @@
 
 
 # 公共端
-from .indextest import *
+from .index import *

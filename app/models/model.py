@@ -5,10 +5,11 @@
 # @Author    :liuguanghong
 
 from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, Integer, Date, DateTime, String,Text
+from sqlalchemy import Column, Integer, Date, DateTime, String, Text
 
 # declarative base class
 Base = declarative_base()
+
 
 class CST(Base):
     # 累计统计表
@@ -26,6 +27,8 @@ class Visiters(Base):
     visit_time = Column(DateTime)
     visit_ip = Column(String(30))
     visit_route = Column(String(200))
+    visit_method = Column(String(10))
+    visit_code = Column(Integer)
 
 
 class ALT(Base):
@@ -47,16 +50,16 @@ class BaseContent:
     visit_comment = Column(Integer, default=0)
 
 
-class Blogs(Base,BaseContent):
+class Blogs(Base, BaseContent):
     __tablename__ = "blogs"
     profile = Column(String(200))
 
 
-class Note(Base,BaseContent):
+class Note(Base, BaseContent):
     __tablename__ = "notes"
 
 
-class Vedio(Base,BaseContent):
+class Vedio(Base, BaseContent):
     __tablename__ = "vedios"
 
 

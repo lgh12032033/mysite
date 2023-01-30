@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker, Session
 
 
 def load_db() -> (redis.ConnectionPool, MongoClient, Session):
-    conf = load_yaml("../../conf/conf.yml")
+    conf = load_yaml("conf/conf.yml")
     database = conf["database"]
     redis_conf = database["redis"]
     mongo_conf = database["mongo"]

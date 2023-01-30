@@ -12,9 +12,8 @@ from sqlalchemy.orm import Session
 db_dic = {}
 db_dic["redis"], db_dic["mongo"], db_dic["sql"] = load_db()
 
-
 def get_sql_session() -> Session:
-    return db_dic["sql"]
+    return db_dic["sql"]()
 
 
 def get_redis_session() -> redis.Redis:
